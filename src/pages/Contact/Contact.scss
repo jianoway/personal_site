@@ -1,0 +1,37 @@
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    min-height: 90vh;
+
+    .contact_body {
+
+        .contact-title {
+            color: white;
+            text-align: center;
+        }
+        .contact-content {
+            min-width: 100%;
+        }
+        .contact-content-item {
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+            vertical-align: middle;
+            text-align: right;
+            align-items: center;
+            gap: 10px;
+            padding: 0 0 10px 10px;
+            a {
+                display: flex;
+                align-items: center !important;
+                height: 100% !important;
+                // line-height: 100% !important
+
+            }
+        }
+    }
+    
+}

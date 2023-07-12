@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Home from "./pages/Home/Home";
+import ErrorPage from "./components/ErrorPage";
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { Toaster } from "react-hot-toast";
 
-function App() {
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Button, AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { Theme, ThemeProvider } from "@emotion/react";
+import "./index.scss";
+import { CustomTheme, themes } from "./themes";
+import Contact from "./pages/Contact/Contact";
+import NavBar from "./components/NavBar";
+
+const wrapAppBar = (
+  Element: React.ElementType,
+  setTheme: Dispatch<SetStateAction<CustomTheme>>
+) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppBar className="AppBar" elevation={0}>
+        <NavBar setTheme={setTheme} />
+      </AppBar>
+      <Element />
+    </>
   );
-}
+};
+const router = (setTheme: Dispatch<SetStateAction<CustomTheme>>) =>
+  createBrowserRouter([
+    {
+      path: "/",
+      element: wrapAppBar(Home, setTheme),
+    },
+    {
+      path: "/contact",
+      element: wrapAppBar(Contact, setTheme),
+    },
+    {
+      path: "*",
+      element: wrapAppBar(ErrorPage, setTheme),
+    },
+  ]);
+
+const App = () => {
+  const [theme, setTheme] = useState<Theme>(themes[0]);
+  return (
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router(setTheme)} />
+        <Toaster />
+      </ThemeProvider>
+    </React.Fragment>
+  );
+};
 
 export default App;
