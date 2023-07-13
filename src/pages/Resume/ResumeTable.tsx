@@ -1,9 +1,11 @@
+import * as React from "react";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
+import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { useCustomTheme } from "../../utils/theme";
 import workData from "./workExperience.json";
@@ -96,15 +98,12 @@ const workRows = workData.data.map((a) => createWorkData(a));
 
 const ResumeTable = () => {
   const theme = useCustomTheme();
-  let counter = 1;
   const colour = [theme.primary, "white"];
-  const getCurrentColour = () => {
-    const c = colour[counter % 2];
-    counter += 1;
-    return c;
+  const getPrimaryColour = () => {
+    return colour[0];
   };
-  const getOtherColour = () => {
-    return colour[counter % 2];
+  const getSecondaryColour = () => {
+    return colour[1];
   };
   return (
     <div className="resume-table">
@@ -128,7 +127,7 @@ const ResumeTable = () => {
                   sx={{
                     background: "transparent",
                     borderBottomColor: "transparent",
-                    color: getCurrentColour,
+                    color: getPrimaryColour,
                   }}
                 >
                   <h2>
@@ -145,7 +144,7 @@ const ResumeTable = () => {
                     role="checkbox"
                     tabIndex={-1}
                     key={row.workplace.name}
-                    sx={{ color: getCurrentColour() }}
+                    sx={{ color: getPrimaryColour() }}
                   >
                     {workColumns.map((column) => {
                       const value = row[column.id];
@@ -158,7 +157,7 @@ const ResumeTable = () => {
                             verticalAlign: "top",
                           }}
                           sx={{
-                            color: getCurrentColour(),
+                            color: getPrimaryColour(),
                             borderBottomColor: "transparent",
                           }}
                         >
@@ -166,9 +165,12 @@ const ResumeTable = () => {
                             <div className="resume-workplace-details_name">
                               {row.workplace.name}
                             </div>
+                            <div className="resume-workplace-details_location">
+                              {row.workplace.location}
+                            </div>
                             <div
                               className="resume-workplace-details_date"
-                              style={{ color: getOtherColour() }}
+                              style={{ color: getSecondaryColour() }}
                             >
                               {`${row.workplace.startMonth} ${
                                 row.workplace.startYear
@@ -180,9 +182,6 @@ const ResumeTable = () => {
                                   : "Present"
                               } `}
                             </div>
-                            <div className="resume-workplace-details_location">
-                              {row.workplace.location}
-                            </div>
                           </div>
                         </TableCell>
                       ) : (
@@ -191,7 +190,7 @@ const ResumeTable = () => {
                           align={column.align}
                           style={{ minWidth: column.minWidth }}
                           sx={{
-                            color: getCurrentColour(),
+                            color: getSecondaryColour(),
                             borderBottomColor: "transparent",
                           }}
                         >
@@ -239,7 +238,7 @@ const ResumeTable = () => {
                     role="checkbox"
                     tabIndex={-1}
                     key={row.name}
-                    sx={{ color: getCurrentColour() }}
+                    sx={{ color: getPrimaryColour() }}
                   >
                     {educationColumns.map((column) => {
                       return column.id == "institution" ? (
@@ -251,7 +250,7 @@ const ResumeTable = () => {
                             verticalAlign: "top",
                           }}
                           sx={{
-                            color: getCurrentColour(),
+                            color: getPrimaryColour(),
                             borderBottomColor: "transparent",
                           }}
                         >
@@ -261,7 +260,7 @@ const ResumeTable = () => {
                             </div>
                             <div
                               className="resume-workplace-details_date"
-                              style={{ color: getOtherColour() }}
+                              style={{ color: getSecondaryColour() }}
                             >
                               {`${row.startMonth} ${row.startYear} to ${
                                 row.endMonth && row.endYear
@@ -280,7 +279,7 @@ const ResumeTable = () => {
                           align={column.align}
                           style={{ minWidth: column.minWidth }}
                           sx={{
-                            color: getCurrentColour(),
+                            color: getSecondaryColour(),
                             borderBottomColor: "transparent",
                           }}
                         >

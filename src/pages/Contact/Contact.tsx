@@ -61,13 +61,13 @@ const Contact = () => {
         <div className="contact-content">
           {contactLink(
             "LinkedIn",
-            "https://www.google.com",
+            "https://www.linkedin.com/in/jian-wei-tan-3a3769197/",
             LinkedInIcon,
             theme.primary
           )}
           {contactLink(
             "GitHub",
-            "https://www.google.com",
+            "https://github.com/jianoway",
             GitHubIcon,
             theme.white
           )}
