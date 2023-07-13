@@ -7,13 +7,16 @@ import {
 } from "@mui/icons-material";
 import "./Contact.scss";
 import { SvgIcon, IconButton } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { makeToast } from "../../components/Toast/Toast";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 const EMAIL = "tanjwkeith@gmail.com";
 
 const Contact = () => {
   const theme = useCustomTheme();
+  const location = useLocation();
 
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text);

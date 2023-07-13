@@ -1,0 +1,36 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    .projects-list-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .projects-list-container_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .projects-link {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: start;
+            a {
+                width: 100% !important;
+                // display: flex;
+                // flex-direction: ;
+                // text-align:  center !important;
+                // height: 100% !important;
+            }
+        }
+    }
+    
+    
+}
+
+.projects-description {
+    color: white;
+}

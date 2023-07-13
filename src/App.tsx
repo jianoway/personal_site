@@ -10,7 +10,10 @@ import { Theme, ThemeProvider } from "@emotion/react";
 import "./index.scss";
 import { CustomTheme, themes } from "./themes";
 import Contact from "./pages/Contact/Contact";
+import Projects from "./pages/Projects/Projects";
+
 import NavBar from "./components/NavBar";
+import Resume from "./pages/Resume/Resume";
 
 const wrapAppBar = (
   Element: React.ElementType,
@@ -34,6 +37,14 @@ const router = (setTheme: Dispatch<SetStateAction<CustomTheme>>) =>
     {
       path: "/contact",
       element: wrapAppBar(Contact, setTheme),
+    },
+    {
+      path: "/resume",
+      element: wrapAppBar(Resume, setTheme),
+    },
+    {
+      path: "/projects",
+      element: wrapAppBar(Projects, setTheme),
     },
     {
       path: "*",

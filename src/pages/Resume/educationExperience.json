@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "name": "National University of Singapore",
+            "startMonth": "Aug.",
+            "startYear": "2020",
+            "endMonth": "",
+            "endYear": "",
+            "title": "Bachelor of Computing (Honours) in Computer Science",
+            "additional": "",
+            "achievements" : [
+                "Awarded the NUS Merit Scholarship for outstanding academic and co-curricular achievements",
+                "GPA: 4.24 out of 5.00 (Second Upper)"
+            ]
+        },
+        {
+            "name": "Dunman High School",
+            "startMonth": "Jan.",
+            "startYear": "2012",
+            "endMonth": "Dec.",
+            "endYear": "2017",
+            "title": "GCE A-Level",
+            "additional": "",
+            "achievements" : [
+                "5 Distinctions and a Merit in H3 Pharmaceutical Chemistry",
+                "Vice-Captian of the Outdoor Activities Club"
+            ]
+        }
+    ]
+}

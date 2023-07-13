@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "name": "IBM",
+            "location": "Singapore",
+            "startMonth": "May",
+            "startYear": "2023",
+            "endMonth": "",
+            "endYear": "",
+            "title": "Technology Engineer Intern",
+            "responsibilities" : [
+                "Contributed to the full-stack development of multiple projects for in a cross-functional Agile software development team",
+                "Implemented multiple features using ReactJS for various client products with IBM CDS",
+                "Built RESTful APIs using Spring Boot that served data to the frontend of the products"
+            ]
+        },
+        {
+            "name": "GIC",
+            "location": "Singapore",
+            "startMonth": "May",
+            "startYear": "2022",
+            "endMonth": "Dec.",
+            "endYear": "2022",
+            "title": "Fullstack Developer Intern",
+            "responsibilities" : [
+                "Contributed to the full-stack development of a live-service internal platform used by Portfolio Managers to track the performance of securities and access research notes from different teams",
+                "Utilized Redux and RTK Query to manage the store of the application to reduce the number of API calls to the backend and improved property management for various components",
+                "Improved the development and deployment build time of a React application by 40% using SWC",
+                "Developed and designed the Administration Page of a live-service internal platform"
+            ]
+        },
+        {
+            "name": "Kinexcs",
+            "location": "Singapore",
+            "startMonth": "Dec.",
+            "startYear": "2021",
+            "endMonth": "May",
+            "endYear": "2022",
+            "title": "Fullstack Developer Intern",
+            "responsibilities" : [
+                "Managed backend services using AWS involving the development of RESTful APIs running on EC2 instances using Python Flask and maintained databases on RDS and DynamoDB",
+                "Standardized the Software Development Life Cycle of a mobile application",
+                "Migrated a Flutter based mobile application to null safety",
+                "Streamlined the data transfer process from a Bluetooth device to RDS while ensuring data-integrity"
+            ]
+        }
+    ]
+}

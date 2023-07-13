@@ -17,7 +17,7 @@ const HomeNav = () => {
     <div className="home-content_container">
       <Stack>
         {makeLink("projects", "Projects")}
-        {makeLink("experience", "Experience")}
+        {makeLink("resume", "Resume")}
         {makeLink("contact", "Contact")}
       </Stack>
     </div>

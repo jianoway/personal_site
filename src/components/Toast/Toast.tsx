@@ -25,4 +25,5 @@ export const makeToast = (message: string, color: string) => {
       duration: 2000,
     }
   );
+  return toastId;
 };
