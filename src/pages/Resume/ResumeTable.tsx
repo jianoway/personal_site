@@ -24,12 +24,12 @@ interface EducationColumn {
   format?: (value: number) => string;
 }
 const workColumns: WorkColumn[] = [
-  { id: "workplace", minWidth: 100 },
+  { id: "workplace", minWidth: 60 },
   { id: "responsibilities", minWidth: 170 },
 ];
 
 const educationColumns: EducationColumn[] = [
-  { id: "institution", minWidth: 100 },
+  { id: "institution", minWidth: 60 },
   { id: "achievements", minWidth: 170 },
 ];
 
@@ -111,10 +111,10 @@ const ResumeTable = () => {
         elevation={0}
         sx={{
           maxHeight: "80vh",
-          width: "75%",
+          width: "80%",
           background: "transparent",
           overflow: "auto",
-          paddingRight: "20px",
+          paddingRight: "10px",
         }}
       >
         <TableContainer sx={{ background: "transparent" }}>
