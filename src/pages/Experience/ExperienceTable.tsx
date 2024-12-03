@@ -1,3 +1,4 @@
+// Import packages
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -5,7 +6,11 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+
+// Import custom hooks
 import { useCustomTheme } from "../../utils/theme";
+
+// Improt data from JSON files
 import workData from "./workExperience.json";
 import education from "./educationExperience.json";
 
@@ -94,7 +99,7 @@ function createWorkData(d: {
 
 const workRows = workData.data.map((a) => createWorkData(a));
 
-const ResumeTable = () => {
+const ExperienceTable = () => {
   const theme = useCustomTheme();
   const colour = [theme.primary, "white"];
   const getPrimaryColour = () => {
@@ -104,7 +109,7 @@ const ResumeTable = () => {
     return colour[1];
   };
   return (
-    <div className="resume-table">
+    <div className="experience-table">
       <Paper
         elevation={0}
         sx={{
@@ -159,15 +164,15 @@ const ResumeTable = () => {
                             borderBottomColor: "transparent",
                           }}
                         >
-                          <div className="resume-workplace-details">
-                            <div className="resume-workplace-details_name">
+                          <div className="experience-workplace-details">
+                            <div className="experience-workplace-details_name">
                               {row.workplace.name}
                             </div>
-                            <div className="resume-workplace-details_location">
+                            <div className="experience-workplace-details_location">
                               {row.workplace.location}
                             </div>
                             <div
-                              className="resume-workplace-details_date"
+                              className="experience-workplace-details_date"
                               style={{ color: getSecondaryColour() }}
                             >
                               {`${row.workplace.startMonth} ${
@@ -192,10 +197,10 @@ const ResumeTable = () => {
                             borderBottomColor: "transparent",
                           }}
                         >
-                          <div className="resume-workplace-title">
+                          <div className="experience-workplace-title">
                             <code>{row.title}</code>
                           </div>
-                          <div className="resume-workplace-responsibilities">
+                          <div className="experience-workplace-responsibilities">
                             <ul>
                               {Array.isArray(value)
                                 ? value.map((a) => {
@@ -252,12 +257,12 @@ const ResumeTable = () => {
                             borderBottomColor: "transparent",
                           }}
                         >
-                          <div className="resume-workplace-details">
-                            <div className="resume-workplace-details_name">
+                          <div className="experience-workplace-details">
+                            <div className="experience-workplace-details_name">
                               {row.name}
                             </div>
                             <div
-                              className="resume-workplace-details_date"
+                              className="experience-workplace-details_date"
                               style={{ color: getSecondaryColour() }}
                             >
                               {`${row.startMonth} ${row.startYear} to ${
@@ -266,7 +271,7 @@ const ResumeTable = () => {
                                   : "Present"
                               } `}
                             </div>
-                            <div className="resume-workplace-details_location">
+                            <div className="experience-workplace-details_location">
                               {row.additional}
                             </div>
                           </div>
@@ -281,10 +286,10 @@ const ResumeTable = () => {
                             borderBottomColor: "transparent",
                           }}
                         >
-                          <div className="resume-workplace-title">
+                          <div className="experience-workplace-title">
                             <code>{row.title}</code>
                           </div>
-                          <div className="resume-workplace-responsibilities">
+                          <div className="experience-workplace-responsibilities">
                             <ul>
                               {row.achievements.map((a) => {
                                 return <li>{a}</li>;
@@ -305,4 +310,4 @@ const ResumeTable = () => {
   );
 };
 
-export default ResumeTable;
+export default ExperienceTable;

@@ -1,19 +1,22 @@
-import "./App.scss";
-import Home from "./pages/Home/Home";
-import ErrorPage from "./components/ErrorPage";
+// Import packages
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { Toaster } from "react-hot-toast";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Button, AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { AppBar } from "@mui/material";
 import { Theme, ThemeProvider } from "@emotion/react";
-import "./index.scss";
+
+// Import components
 import { CustomTheme, themes } from "./themes";
+import NavBar from "./components/NavBar";
+import ErrorPage from "./components/ErrorPage";
+import Experience from "./pages/Experience/Experience";
 import Contact from "./pages/Contact/Contact";
 import Projects from "./pages/Projects/Projects";
+import Home from "./pages/Home/Home";
 
-import NavBar from "./components/NavBar";
-import Resume from "./pages/Resume/Resume";
+// Import styles
+import "./App.scss";
+import "./index.scss";
 
 const wrapAppBar = (
   Element: React.ElementType,
@@ -39,8 +42,8 @@ const router = (setTheme: Dispatch<SetStateAction<CustomTheme>>) =>
       element: wrapAppBar(Contact, setTheme),
     },
     {
-      path: "/resume",
-      element: wrapAppBar(Resume, setTheme),
+      path: "/experience",
+      element: wrapAppBar(Experience, setTheme),
     },
     {
       path: "/projects",

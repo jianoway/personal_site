@@ -1,11 +1,12 @@
-import { useState } from "react";
-
-import { Paper, Button } from "@mui/material";
+// Import packages
 import Carousel from "react-material-ui-carousel";
-import { Link, useLocation } from "react-router-dom";
-import "./Projects.scss";
-import Home from "@mui/icons-material/Home";
+import { Link } from "react-router-dom";
+
+// Import theme
 import { useCustomTheme } from "../../utils/theme";
+
+// Import styles
+import "./Projects.scss";
 
 interface CarouselItemProps {
   title: string;
@@ -18,18 +19,7 @@ interface CarouselItemProps {
 const Item = (props: CarouselItemProps) => {
   const theme = useCustomTheme();
   return (
-    <div
-    // elevation={0}
-    // sx={{
-    //   display: "flex",
-    //   flexDirection: "column",
-    //   justifyContent: "top",
-    //   bgcolor: "transparent",
-    //   width: "300px",
-    //   paddingBottom: "20px",
-    //   height: "500px",
-    // }}
-    >
+    <div>
       <div>
         <div>
           <img

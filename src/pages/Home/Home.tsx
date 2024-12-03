@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
-import Typewriter from "typewriter-effect";
-import "./Home.scss";
-import { useState } from "react";
-import { useTheme } from "@emotion/react";
+// Import components
 import HomeIntro from "./HomeIntro";
 import HomeNav from "./HomeNav";
+
+// Import styles
+import "./Home.scss";
+
 const Home = (props: any) => {
   return (
     <div className="home_container">

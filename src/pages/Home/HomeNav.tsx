@@ -1,7 +1,9 @@
-import { ListItem, Stack, Tooltip } from "@mui/material";
+import { ListItem, Stack } from "@mui/material";
 import { useCustomTheme } from "../../utils/theme";
 import { Link } from "react-router-dom";
+
 import "./Home.scss";
+
 const HomeNav = () => {
   const theme = useCustomTheme();
   const makeLink = (href: string, title: string) => {
@@ -17,7 +19,7 @@ const HomeNav = () => {
     <div className="home-content_container">
       <Stack>
         {makeLink("projects", "Projects")}
-        {makeLink("resume", "Resume")}
+        {makeLink("experience", "Experience")}
         {makeLink("contact", "Contact")}
       </Stack>
     </div>

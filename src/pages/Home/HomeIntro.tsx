@@ -1,10 +1,10 @@
+// Import packages
 import { useTheme } from "@emotion/react";
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 
 const HomeIntro = () => {
   const theme: any = useTheme();
-  const [titleLoaded, setTitleLoaded] = useState(false);
 
   const makeBold = (text: string) => {
     return (
@@ -27,7 +27,6 @@ const HomeIntro = () => {
               typewriter
                 .typeString(`<code>Jian Wei</code>`)
                 .pauseFor(50)
-                .callFunction(() => setTitleLoaded(true))
                 .start();
             }}
           />

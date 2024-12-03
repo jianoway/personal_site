@@ -1,43 +1,43 @@
-.resume-container {
+.experience-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-    .resume-download-container {
+    .experience-download-container {
         display: flex;
         flex: row;
         justify-content: center;
         padding-top: 30px;
     }
-    .resume-table {
+    .experience-table {
         display: flex;
         flex-direction: row;
         justify-content: center;
         padding-top: 20px;
         padding-bottom: 20px;
-        .resume-workplace-details {
+        .experience-workplace-details {
             display: flex;
             flex-direction: column;
             height: 100%;
             justify-content: start;
-            .resume-workplace-details_name {
+            .experience-workplace-details_name {
                 font-weight: 600;
                 font-size: 110%;
             }
-            .resume-workplace-details_location {
+            .experience-workplace-details_location {
                 font-style: italic;
                 font-size: 90%;
             }
-            .resume-workplace-details_date {
+            .experience-workplace-details_date {
                 font-style: italic;
             }           
         }
-        .resume-workplace-title {
+        .experience-workplace-title {
             font-weight: 600;
             font-size: 110%;
         }
-        .resume-workplace-responsibilities {
+        .experience-workplace-responsibilities {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             ul {
                 padding: 0px 0px 0px 10px;

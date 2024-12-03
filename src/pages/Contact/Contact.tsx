@@ -1,22 +1,26 @@
-import { useCustomTheme } from "../../utils/theme";
+// Import packages
 import {
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
   Email as EmailIcon,
   ContentCopy as ContentCopyIcon,
 } from "@mui/icons-material";
-import "./Contact.scss";
 import { SvgIcon, IconButton } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+// Import theme
+import { useCustomTheme } from "../../utils/theme";
+
+// Import components
 import { makeToast } from "../../components/Toast/Toast";
-import { useEffect } from "react";
-import { toast } from "react-hot-toast";
+
+// Import styles
+import "./Contact.scss";
 
 const EMAIL = "tanjwkeith@gmail.com";
 
 const Contact = () => {
   const theme = useCustomTheme();
-  const location = useLocation();
 
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text);

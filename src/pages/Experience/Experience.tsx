@@ -1,12 +1,18 @@
-import ResumeTable from "./ResumeTable";
-import "./Resume.scss";
+// Import packages
 import { IconButton } from "@mui/material";
 import { Download as DownloadIcon } from "@mui/icons-material";
-const Resume = () => {
+
+// Import components
+import ExperienceTable from "./ExperienceTable";
+
+// Import styles
+import "./Experience.scss";
+
+const Experience = () => {
   return (
-    <div className="resume-container">
-      <div className="resume-download-container">
-        <a href="/JianWeiTAN-Resume(no_hp).pdf" download>
+    <div className="experience-container">
+      <div className="experience-download-container">
+        <a href="/JianWeiTAN-Experience(no_hp).pdf" download>
           <IconButton
             edge="start"
             aria-label="menu"
@@ -17,9 +23,9 @@ const Resume = () => {
           </IconButton>
         </a>
       </div>
-      <ResumeTable />
+      <ExperienceTable />
     </div>
   );
 };
 
-export default Resume;
+export default Experience;
